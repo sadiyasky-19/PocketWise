@@ -52,7 +52,7 @@ useEffect(() => {
   async function loadBudget() {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/budget/${selectedMonth}`
+        `https://pocketwise-1.onrender.com/api/budget/${selectedMonth}`
       );
 
       const data = await response.json();
@@ -115,7 +115,7 @@ async function saveBudget(event) {
     setBudgetInput('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/budget', {
+      const response = await fetch('https://pocketwise-1.onrender.com/api/budget', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -145,7 +145,7 @@ async function addExpense(event) {
   }
 
   try {
-    const response = await fetch('http://localhost:5000/api/expenses', {
+    const response = await fetch('https://pocketwise-1.onrender.com/api/expenses', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -188,7 +188,7 @@ async function addExpense(event) {
   
 async function deleteExpense(id) {
   try {
-    const response = await fetch(`http://localhost:5000/api/expenses/${id}`, {
+    const response = await fetch(`https://pocketwise-1.onrender.com/api/expenses/${id}`, {
       method: 'DELETE'
     });
 
